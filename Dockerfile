@@ -7,14 +7,20 @@ USER root
 ARG TOMCAT_PATH=/usr/local/tomcat/apache-tomcat-7.0.62
   
 # App 복사
-COPY files/webapps/*.war ${TOMCAT_PATH}/webapps/
+COPY files/webapps/simple ${TOMCAT_PATH}/webapps/simple
    
 # Lib
 #COPY files/lib/*.jar ${TOMCAT_PATH}/lib/
   
 # conf
 #COPY files/conf/*.xml ${TOMCAT_PATH}/conf/
+
+# Maven Repo. Direcotry Permission
+RUN chmod 770 /usr/local/tomcat/apache-tomcat-7.0.62 -R
+     
+# Allow arbitrary
+USER 185
   
 EXPOSE 8080
    
-ENTRYPOINT ["catalina.sh", "run"]
+#ENTRYPOINT ["catalina.sh", "run"]
