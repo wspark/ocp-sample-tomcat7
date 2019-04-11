@@ -17,7 +17,7 @@ ADD files/webapps/simple ${TOMCAT_PATH}/webapps/simple
 #COPY files/conf/*.xml ${TOMCAT_PATH}/conf/
 
 # Maven Repo. Direcotry Permission
-RUN chmod 775 /usr/local/tomcat/apache-tomcat-7.0.62 -R
+RUN chmod 777 /usr/local/tomcat/apache-tomcat-7.0.62 -R
      
 # Allow arbitrary
 USER 185
