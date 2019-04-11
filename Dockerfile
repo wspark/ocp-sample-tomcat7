@@ -8,7 +8,7 @@ ARG TOMCAT_PATH=/usr/local/tomcat/apache-tomcat-7.0.62
   
 # App 복사
 #COPY files/webapps/simple ${TOMCAT_PATH}/webapps/
-ADD files/webapps/simple ${TOMCAT_PATH}/webapps/
+ADD files/webapps/simple ${TOMCAT_PATH}/webapps/simple
    
 # Lib
 #COPY files/lib/*.jar ${TOMCAT_PATH}/lib/
