@@ -17,10 +17,10 @@ ADD files/webapps/simple ${TOMCAT_PATH}/webapps/simple
 #COPY files/conf/*.xml ${TOMCAT_PATH}/conf/
 
 # Maven Repo. Direcotry Permission
-RUN chmod 750 /usr/local/tomcat/apache-tomcat-7.0.62/logs -R
+RUN chmod 770 /usr/local/tomcat/apache-tomcat-7.0.62 -R
      
 # Allow arbitrary
-USER 185
+#USER 185
   
 EXPOSE 8080
    
