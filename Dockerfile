@@ -2,13 +2,10 @@
 FROM tomcat7-base:latest
     
 USER root
+RUN useradd -u 185 -G root tomcat
   
 #ARG TOMCAT_PATH=/opt/webserver
 ARG TOMCAT_PATH=/usr/local/tomcat/apache-tomcat-7.0.62
-  
-# App 복사
-#COPY files/webapps/simple ${TOMCAT_PATH}/webapps/
-ADD files/webapps/simple ${TOMCAT_PATH}/webapps/simple
    
 # Lib
 #COPY files/lib/*.jar ${TOMCAT_PATH}/lib/
@@ -16,9 +13,14 @@ ADD files/webapps/simple ${TOMCAT_PATH}/webapps/simple
 # conf
 #COPY files/conf/*.xml ${TOMCAT_PATH}/conf/
 
-# Maven Repo. Direcotry Permission
-RUN chmod 777 /usr/local/tomcat/apache-tomcat-7.0.62 -R
+# Direcotry Permission
+RUN chmod 770 /usr/local/tomcat/apache-tomcat-7.0.62 -R \
+   && chown -R tomcat:root /usr/local/tomcat/apache-tomcat-7.0.62 
      
+# App 복사
+#COPY files/webapps/simple ${TOMCAT_PATH}/webapps/
+ADD files/webapps/simple ${TOMCAT_PATH}/webapps/simple
+
 # Allow arbitrary
 USER 185
   
