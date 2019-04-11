@@ -20,8 +20,8 @@ ADD files/webapps/simple ${TOMCAT_PATH}/webapps/simple
 RUN chmod 775 /usr/local/tomcat/apache-tomcat-7.0.62 -R
      
 # Allow arbitrary
-#USER 185
+USER 185
   
 EXPOSE 8080
    
-#ENTRYPOINT ["catalina.sh", "run"]
+ENTRYPOINT ["catalina.sh", "run"]
