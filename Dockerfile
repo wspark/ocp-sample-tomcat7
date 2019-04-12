@@ -2,7 +2,7 @@
 FROM tomcat7-base:latest
     
 USER root
-RUN useradd -u 185 -G root tomcat
+#RUN useradd -u 185 -G root tomcat
   
 #ARG TOMCAT_PATH=/opt/webserver
 ARG TOMCAT_PATH=/usr/local/tomcat/apache-tomcat-7.0.62
