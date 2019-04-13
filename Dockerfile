@@ -1,7 +1,8 @@
 #FROM registry.access.redhat.com/jboss-webserver-3/webserver31-tomcat7-openshift
 FROM tomcat7-base:latest
     
-USER root
+#USER root
+USER 185
 #RUN useradd -u 185 -G root tomcat
   
 #ARG TOMCAT_PATH=/opt/webserver
