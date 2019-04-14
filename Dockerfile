@@ -15,8 +15,8 @@ ARG TOMCAT_PATH=/usr/local/tomcat/apache-tomcat-7.0.62
 #COPY files/conf/*.xml ${TOMCAT_PATH}/conf/
 
 # Direcotry Permission
-RUN chmod 770 /usr/local/tomcat/apache-tomcat-7.0.62 -R \
-   && chown -R tomcat:root /usr/local/tomcat/apache-tomcat-7.0.62 
+RUN chmod 770 /usr/local/tomcat/apache-tomcat-7.0.62 -R 
+#   && chown -R tomcat:root /usr/local/tomcat/apache-tomcat-7.0.62 
      
 # App 복사
 #COPY files/webapps/simple ${TOMCAT_PATH}/webapps/
