@@ -28,4 +28,4 @@ USER 185
   
 EXPOSE 8080
    
-#ENTRYPOINT ["catalina.sh", "run"]
+ENTRYPOINT ["catalina.sh", "run"]
