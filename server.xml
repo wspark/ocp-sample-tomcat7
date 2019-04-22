@@ -49,7 +49,7 @@
                type="javax.sql.DataSource" 
                driverClassName="com.mysql.jdbc.Driver"
                url="jdbc:mysql://10.64.22.6:3306/egov"
-               username="wspark" password="rplinux12#"
+               username="wspark" password="${VAULT::my_block::uat-crm1-oracle-password::}"
                maxTotal="10"
                maxIdle="10"
                minIdle="10"
