@@ -26,8 +26,8 @@ COPY vault-uat-crm1.keystore ${TOMCAT_PATH}/conf/
 
 
 # Direcotry Permission
-RUN chmod 770 /usr/local/tomcat/apache-tomcat-7.0.62/conf  
-  && chown -R 185:root /usr/local/tomcat/apache-tomcat-7.0.62/conf
+RUN chmod 770 ${TOMCAT_PATH}/conf  
+  && chown -R 185:root ${TOMCAT_PATH}/conf
      
 # App 복사
 ADD files/webapps/simple ${TOMCAT_PATH}/webapps/simple
