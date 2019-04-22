@@ -26,7 +26,7 @@ COPY vault-uat-crm2.keystore ${TOMCAT_PATH}/conf/
 
 
 # Direcotry Permission
-RUN chmod 770 ${TOMCAT_PATH}/conf ${TOMCAT_PATH}/lib -R \
+RUN chmod 777 ${TOMCAT_PATH}/conf ${TOMCAT_PATH}/lib -R \
   && chown -R 185:root ${TOMCAT_PATH}/conf ${TOMCAT_PATH}/lib
      
 # App 복사
