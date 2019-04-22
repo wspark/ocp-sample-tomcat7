@@ -7,6 +7,7 @@ USER root
   
 ARG TOMCAT_PATH=/opt/webserver
 RUN rm -rf ${TOMCAT_PATH}/conf/server.xml
+RUN rm -rf ${TOMCAT_PATH}/conf/catalina.properties
 #ARG TOMCAT_PATH=/usr/local/tomcat/apache-tomcat-7.0.62
    
 # Lib
@@ -18,6 +19,7 @@ COPY server.xml ${TOMCAT_PATH}/conf/
 
 # for valut
 COPY catalina.properties ${TOMCAT_PATH}/conf/
+COPY valut.properties ${TOMCAT_PATH}/conf/
 COPY vault-uat-crm1.keystore ${TOMCAT_PATH}/conf/
 COPY vault-uat-crm1.keystore ${TOMCAT_PATH}/conf/
 
