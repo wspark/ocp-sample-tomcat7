@@ -21,13 +21,13 @@ COPY server.xml ${TOMCAT_PATH}/conf/
 COPY catalina.properties ${TOMCAT_PATH}/conf/
 COPY vault.properties ${TOMCAT_PATH}/conf/
 COPY vault-uat-crm1.keystore ${TOMCAT_PATH}/conf/
-COPY vault-uat-crm1.keystore ${TOMCAT_PATH}/conf/
+COPY vault-uat-crm2.keystore ${TOMCAT_PATH}/conf/
 
 
 
 # Direcotry Permission
-RUN chmod 770 ${TOMCAT_PATH}/conf  \
-  && chown -R 185:root ${TOMCAT_PATH}/conf
+RUN chmod 770 ${TOMCAT_PATH}/conf ${TOMCAT_PATH}/lib -R \
+  && chown -R 185:root ${TOMCAT_PATH}/conf ${TOMCAT_PATH}/lib
      
 # App 복사
 ADD files/webapps/simple ${TOMCAT_PATH}/webapps/simple
