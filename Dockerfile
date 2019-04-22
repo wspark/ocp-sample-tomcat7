@@ -11,6 +11,7 @@ RUN rm -rf ${TOMCAT_PATH}/conf/server.xml
    
 # Lib
 COPY mysql-connector-java-commercial-5.1.29-bin.jar ${TOMCAT_PATH}/lib/
+COPY tomcat-vault.jar ${TOMCAT_PATH}/lib/
   
 # conf
 COPY server.xml ${TOMCAT_PATH}/conf/
