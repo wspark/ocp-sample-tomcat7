@@ -10,7 +10,7 @@ RUN rm -rf ${TOMCAT_PATH}/conf/server.xml
 #ARG TOMCAT_PATH=/usr/local/tomcat/apache-tomcat-7.0.62
    
 # Lib
-COPY *.jar ${TOMCAT_PATH}/lib/
+COPY mysql-connector-java-commercial-5.1.29-bin.jar ${TOMCAT_PATH}/lib/
   
 # conf
 COPY server.xml ${TOMCAT_PATH}/conf/
