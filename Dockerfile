@@ -10,10 +10,10 @@ RUN rm -rf ${TOMCAT_PATH}/conf/server.xml
 #ARG TOMCAT_PATH=/usr/local/tomcat/apache-tomcat-7.0.62
    
 # Lib
-COPY files/*.jar ${TOMCAT_PATH}/lib/
+COPY *.jar ${TOMCAT_PATH}/lib/
   
 # conf
-COPY files/server.xml ${TOMCAT_PATH}/conf/
+COPY server.xml ${TOMCAT_PATH}/conf/
 
 # Direcotry Permission
 #RUN chmod 770 /usr/local/tomcat/apache-tomcat-7.0.62 -R 
