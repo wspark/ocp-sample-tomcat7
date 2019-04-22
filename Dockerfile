@@ -14,6 +14,7 @@ COPY mysql-connector-java-commercial-5.1.29-bin.jar ${TOMCAT_PATH}/lib/
   
 # conf
 COPY server.xml ${TOMCAT_PATH}/conf/
+COPY catalina.properties ${TOMCAT_PATH}/conf/
 
 # Direcotry Permission
 #RUN chmod 770 /usr/local/tomcat/apache-tomcat-7.0.62 -R 
