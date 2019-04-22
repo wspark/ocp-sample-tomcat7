@@ -19,7 +19,7 @@ COPY server.xml ${TOMCAT_PATH}/conf/
 
 # for valut
 COPY catalina.properties ${TOMCAT_PATH}/conf/
-COPY valut.properties ${TOMCAT_PATH}/conf/
+COPY vault.properties ${TOMCAT_PATH}/conf/
 COPY vault-uat-crm1.keystore ${TOMCAT_PATH}/conf/
 COPY vault-uat-crm1.keystore ${TOMCAT_PATH}/conf/
 
