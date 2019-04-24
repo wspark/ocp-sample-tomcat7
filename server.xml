@@ -58,6 +58,20 @@
                testWhileIdle="true"
                timeBetweenEvictionRunsMillis="10000"
      />
+     <Resource name="mysql2" auth="Container"
+               type="javax.sql.DataSource" 
+               driverClassName="com.mysql.jdbc.Driver"
+               url="jdbc:mysql://172.30.1.20:3306/egov"
+               username="wspark" password="${VAULT::my_block::uat-crm2-oracle-password::}"
+               maxTotal="10"
+               maxIdle="10"
+               minIdle="10"
+               maxWaitMillis="30000"
+               validationQuery="SELECT 1"
+               testWhileIdle="true"
+               timeBetweenEvictionRunsMillis="10000"
+     />
+
 
   </GlobalNamingResources>
 
@@ -151,7 +165,7 @@
                                type="javax.sql.DataSource" />
         </Context>
         <Context path="/simple" docBase="simple" allowLinking="true">
-               <ResourceLink global="mysql" name="mysql"
+               <ResourceLink global="mysql2" name="mysql2"
                                type="javax.sql.DataSource" />
         </Context>
 
