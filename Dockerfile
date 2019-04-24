@@ -21,7 +21,7 @@ COPY server.xml ${TOMCAT_PATH}/conf/
 COPY catalina.properties ${TOMCAT_PATH}/conf/
 COPY vault.properties ${TOMCAT_PATH}/conf/
 COPY vault-uat-crm1.keystore ${TOMCAT_PATH}/conf/
-COPY vault-uat-crm2.keystore ${TOMCAT_PATH}/conf/
+#COPY vault-uat-crm2.keystore ${TOMCAT_PATH}/conf/
 COPY VAULT.dat ${TOMCAT_PATH}/conf/
 
 
