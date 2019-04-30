@@ -12,17 +12,16 @@ RUN rm -rf ${TOMCAT_PATH}/conf/catalina.properties
    
 # Lib
 COPY mysql-connector-java-commercial-5.1.29-bin.jar ${TOMCAT_PATH}/lib/
-COPY tomcat-vault.jar ${TOMCAT_PATH}/lib/
   
 # conf
 COPY server.xml ${TOMCAT_PATH}/conf/
 
 # for valut
-COPY catalina.properties ${TOMCAT_PATH}/conf/
-COPY vault.properties ${TOMCAT_PATH}/conf/
-COPY vault-uat-crm1.keystore ${TOMCAT_PATH}/conf/
-#COPY vault-uat-crm2.keystore ${TOMCAT_PATH}/conf/
-COPY VAULT.dat ${TOMCAT_PATH}/conf/
+COPY files/vault/tomcat-vault.jar ${TOMCAT_PATH}/lib/
+COPY files/vault/catalina.properties ${TOMCAT_PATH}/conf/
+COPY files/vault/vault.properties ${TOMCAT_PATH}/conf/
+COPY files/vault/vault-uat-crm1.keystore ${TOMCAT_PATH}/conf/
+COPY files/vault/VAULT.dat ${TOMCAT_PATH}/conf/
 
 
 
