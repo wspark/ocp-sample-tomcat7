@@ -20,7 +20,7 @@ COPY server.xml ${TOMCAT_PATH}/conf/
 COPY files/vault/tomcat-vault.jar ${TOMCAT_PATH}/lib/
 COPY files/vault/catalina.properties ${TOMCAT_PATH}/conf/
 COPY files/vault/vault.properties ${TOMCAT_PATH}/conf/
-COPY files/vault/vault-uat-crm1.keystore ${TOMCAT_PATH}/conf/
+COPY files/vault/crm.keystore ${TOMCAT_PATH}/conf/
 COPY files/vault/VAULT.dat ${TOMCAT_PATH}/conf/
 
 
@@ -32,6 +32,7 @@ RUN chmod 777 ${TOMCAT_PATH}/conf ${TOMCAT_PATH}/lib -R \
 # App 복사
 ADD files/webapps/simple ${TOMCAT_PATH}/webapps/simple
 ADD files/webapps/web ${TOMCAT_PATH}/webapps/web
+ADD files/webapps/web2 ${TOMCAT_PATH}/webapps/web2
 
 # Allow arbitrary
 USER 185
