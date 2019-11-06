@@ -7,8 +7,9 @@ USER root
 #RUN useradd -u 185 -G root tomcat
 
 #RUN yum -y update \
-RUN yum -y openssh-clients \
- && yum clean all
+#RUN yum -y openssh-clients \
+RUN yum -y openssh-clients 
+ #&& yum clean all
   
 ARG TOMCAT_PATH=/opt/webserver
 RUN rm -rf ${TOMCAT_PATH}/conf/server.xml
