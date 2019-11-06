@@ -6,8 +6,8 @@ USER root
 #USER 185
 #RUN useradd -u 185 -G root tomcat
 
-RUN yum -y update \
- && yum -y install httpd \
+#RUN yum -y update \
+RUN yum -y openssh-clients \
  && yum clean all
   
 ARG TOMCAT_PATH=/opt/webserver
