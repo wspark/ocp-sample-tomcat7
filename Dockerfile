@@ -7,8 +7,10 @@ USER root
 #RUN useradd -u 185 -G root tomcat
 
 # RUN yum -y update \
- RUN yum -y openssh-clients.x86_64 
+ RUN yum -y install openssh-clients.x86_64 
  
+ 
+  
   
 ARG TOMCAT_PATH=/opt/webserver
 RUN rm -rf ${TOMCAT_PATH}/conf/server.xml
