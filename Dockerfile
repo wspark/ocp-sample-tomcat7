@@ -5,6 +5,10 @@ FROM registry.redhat.io/jboss-webserver-3/webserver31-tomcat7-openshift
 USER root
 #USER 185
 #RUN useradd -u 185 -G root tomcat
+
+RUN yum -y update \
+ && yum -y install httpd \
+ && yum clean all
   
 ARG TOMCAT_PATH=/opt/webserver
 RUN rm -rf ${TOMCAT_PATH}/conf/server.xml
