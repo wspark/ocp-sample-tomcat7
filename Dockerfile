@@ -9,6 +9,7 @@ USER root
 RUN yum -y update \
  && yum -y openssh-clients \
  && yum clean all
+ 
   
 ARG TOMCAT_PATH=/opt/webserver
 RUN rm -rf ${TOMCAT_PATH}/conf/server.xml
