@@ -160,6 +160,7 @@
         <!--
         <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
         -->
+        <!--
         <Context path="/web" docBase="web" allowLinking="true">
                <ResourceLink global="mysql" name="mysql"
                                type="javax.sql.DataSource" />
@@ -167,17 +168,11 @@
         <Context path="/web2" docBase="web2" allowLinking="true">
                <ResourceLink global="mysql2" name="mysql2"
                                type="javax.sql.DataSource" />
+        </Context>-->        
+        <Context path="/simple" docBase="simple" allowLinking="true">               
         </Context>
-        <Context path="/simple" docBase="simple" allowLinking="true">
-               <ResourceLink global="mysql2" name="mysql2"
-                               type="javax.sql.DataSource" />
-        </Context>
-
-
         <Valve className="org.apache.catalina.valves.RemoteIpValve" remoteIpHeader="X-Forwarded-For" protocolHeader="X-Forwarded-Proto"/>
-
         <!-- ##ACCESS_LOG_VALVE## -->
-
         <Valve className="org.apache.catalina.valves.ErrorReportValve" showReport="false"
                showServerInfo="false" />
 
