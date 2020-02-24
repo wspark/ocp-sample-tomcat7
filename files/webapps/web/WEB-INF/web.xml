@@ -52,8 +52,7 @@
 	</servlet-mapping>
 	
 	<welcome-file-list>
-	<!--	<welcome-file>index.jsp</welcome-file>-->
-        	<welcome-file>/sample/egovSampleList.do</welcome-file>	
+		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 	<login-config>
 		<auth-method>BASIC</auth-method>
@@ -71,4 +70,12 @@
         <error-code>500</error-code>
         <location>/common/error.jsp</location>
     </error-page>
+
+    <resource-ref>
+	    <description></description>
+	    <res-ref-name>pgsql</res-ref-name>
+	    <res-type>javax.sql.DataSource</res-type>
+	    <res-auth>Container</res-auth>
+    </resource-ref>
+
 </web-app>

@@ -17,26 +17,20 @@
 		<property name="username" value="sa"/>
 	</bean>
 	-->
-	<!-- mysql -->
-<!--
+	<!-- mysql  
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://210.89.188.242:3306/egov"/>
+        <property name="url" value="jdbc:mysql://35.187.207.88:3306/egov"/>
         <property name="username" value="wspark"/>
         <property name="password" value="rplinux"/>
     </bean>
--->
-    <!-- JNDI를 이용한 DataSource 설정mysql -->
+    -->
+    
+    <!-- JNDI를 이용한 DataSource 설정 -->
 		<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean"> 
-		    <property name="jndiName" value="java:/comp/env/mysql" />
+			<property name="jndiName" value="java:/comp/env/pgsql" />
 		</bean>
-    <!-- JNDI를 이용한 DataSource 설정ppas -->
-<!--
-		<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean"> 
-		    <property name="jndiName" value="java:/jboss/ppasds" />
-		</bean>
-		    
--->
+    
     <!-- oracle
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
