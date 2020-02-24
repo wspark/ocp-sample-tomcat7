@@ -19,7 +19,7 @@ RUN rm -rf ${TOMCAT_PATH}/conf/catalina.properties
    
 # Lib
 COPY mysql-connector-java-commercial-5.1.29-bin.jar ${TOMCAT_PATH}/lib/
-COP postgresql-42.2.9.jar ${TOMCAT_PATH}/lib/
+COPY postgresql-42.2.9.jar ${TOMCAT_PATH}/lib/
   
 # conf
 COPY server.xml ${TOMCAT_PATH}/conf/
