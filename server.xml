@@ -160,11 +160,12 @@
         <!--
         <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
         -->
-        <!--
+        
         <Context path="/web" docBase="web" allowLinking="true">
                <ResourceLink global="mysql" name="mysql"
                                type="javax.sql.DataSource" />
         </Context>
+        <!--
         <Context path="/web2" docBase="web2" allowLinking="true">
                <ResourceLink global="mysql2" name="mysql2"
                                type="javax.sql.DataSource" />
