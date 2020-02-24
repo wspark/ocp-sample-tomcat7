@@ -71,6 +71,18 @@
                testWhileIdle="true"
                timeBetweenEvictionRunsMillis="10000"
      />
+    
+        <Resource   name="pgsql"
+                    auth="Container"
+                    type="javax.sql.DataSource"
+                    driverClassName="org.postgresql.Driver"
+                    loginTimeout="10"
+                    maxWait="5000"
+                    username="wspark"
+                    password="rplinux"
+                    testOnBorrow="true"
+                    url="jdbc:postgresql://10.65.40.240:5432/egov2" />
+
 
 
   </GlobalNamingResources>
@@ -162,14 +174,14 @@
         -->
         
         <Context path="/web" docBase="web" allowLinking="true">
+               <ResourceLink global="pgsql" name="pgsql"
+                               type="javax.sql.DataSource" />
+        </Context>
+        
+        <Context path="/web2" docBase="web2" allowLinking="true">
                <ResourceLink global="mysql" name="mysql"
                                type="javax.sql.DataSource" />
         </Context>
-        <!--
-        <Context path="/web2" docBase="web2" allowLinking="true">
-               <ResourceLink global="mysql2" name="mysql2"
-                               type="javax.sql.DataSource" />
-        </Context>-->        
         <Context path="/simple" docBase="simple" allowLinking="true">               
         </Context>
         <Valve className="org.apache.catalina.valves.RemoteIpValve" remoteIpHeader="X-Forwarded-For" protocolHeader="X-Forwarded-Proto"/>
