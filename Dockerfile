@@ -15,6 +15,7 @@ USER root
 ARG TOMCAT_PATH=/opt/webserver
 RUN rm -rf ${TOMCAT_PATH}/conf/server.xml
 RUN rm -rf ${TOMCAT_PATH}/conf/catalina.properties
+RUN rm -rf ${TOMCAT_PATH}/conf/web.xml
 #ARG TOMCAT_PATH=/usr/local/tomcat/apache-tomcat-7.0.62
    
 # Lib
@@ -23,6 +24,7 @@ COPY postgresql-42.2.9.jar ${TOMCAT_PATH}/lib/
   
 # conf
 COPY server.xml ${TOMCAT_PATH}/conf/
+COPY web.xml ${TOMCAT_PATH}/conf/
 
 # for valut
 COPY files/vault/tomcat-vault.jar ${TOMCAT_PATH}/lib/
