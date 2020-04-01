@@ -184,10 +184,18 @@
         </Context>
         <Context path="/simple" docBase="simple" allowLinking="true">               
         </Context>
+          <Valve className="org.apache.catalina.valves.AccessLogValve"
+               directory="/logs" prefix="${server.name}_access." suffix=".log"
+               pattern="%{X-Forwarded-For}i %h %l %u %t &quot;%r&quot; %s %b &quot;%{Referer}i&quot; &quot;%{User-Agent}i&quot;" 
+               resolveHosts="false" fileDateFormat="yyyy-MM-dd-HH"/>
+<!--
         <Valve className="org.apache.catalina.valves.RemoteIpValve" remoteIpHeader="X-Forwarded-For" protocolHeader="X-Forwarded-Proto"/>
+-->
         <!-- ##ACCESS_LOG_VALVE## -->
+        <!--
         <Valve className="org.apache.catalina.valves.ErrorReportValve" showReport="false"
                showServerInfo="false" />
+-->
 
       </Host>
     </Engine>
