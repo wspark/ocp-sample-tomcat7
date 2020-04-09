@@ -172,7 +172,7 @@
         <!--
         <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
         -->
-        
+        <!--
         <Context path="/web" docBase="web" allowLinking="true">
                <ResourceLink global="pgsql" name="pgsql"
                                type="javax.sql.DataSource" />
@@ -182,6 +182,7 @@
                <ResourceLink global="mysql" name="mysql"
                                type="javax.sql.DataSource" />
         </Context>
+-->
         <Context path="/simple" docBase="simple" allowLinking="true">               
         </Context>
           <Valve className="org.apache.catalina.valves.AccessLogValve"
