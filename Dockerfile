@@ -40,9 +40,9 @@ RUN chmod 777 ${TOMCAT_PATH}/conf ${TOMCAT_PATH}/lib -R \
   && chown -R 185:root ${TOMCAT_PATH}/conf ${TOMCAT_PATH}/lib
      
 # App 복사
-ADD files/webapps/simple ${TOMCAT_PATH}/webapps/simple
-ADD files/webapps/web ${TOMCAT_PATH}/webapps/web
-ADD files/webapps/web2 ${TOMCAT_PATH}/webapps/web2
+#ADD files/webapps/simple ${TOMCAT_PATH}/webapps/simple
+#ADD files/webapps/web ${TOMCAT_PATH}/webapps/web
+#ADD files/webapps/web2 ${TOMCAT_PATH}/webapps/web2
 
 # Allow arbitrary
 USER 185
