@@ -164,7 +164,7 @@
         <!-- no additional realms configured -->
       </Realm>
 
-      <Host name="localhost"  appBase="/app"
+      <Host name="localhost"  appBase="webapps"
             unpackWARs="true" autoDeploy="true" deployOnStartup="true">
 
         <!-- SingleSignOn valve, share authentication between web applications
