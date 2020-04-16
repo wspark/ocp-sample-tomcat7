@@ -183,8 +183,9 @@
                                type="javax.sql.DataSource" />
         </Context>
 -->
+        <!--
         <Context path="/simple" docBase="simple" allowLinking="true">               
-        </Context>
+        </Context>-->
           <Valve className="org.apache.catalina.valves.AccessLogValve"
                directory="/logs" prefix="${server.name}_access." suffix=".log"
                pattern="%{X-Forwarded-For}i %h %l %u %t &quot;%r&quot; %s %b &quot;%{Referer}i&quot; &quot;%{User-Agent}i&quot;" 
