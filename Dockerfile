@@ -1,5 +1,7 @@
 #FROM registry.access.redhat.com/jboss-webserver-3/webserver31-tomcat7-openshift
-FROM registry.redhat.io/jboss-webserver-3/webserver31-tomcat7-openshift
+#FROM registry.redhat.io/jboss-webserver-3/webserver31-tomcat7-openshift
+FROM docker-registry.default.svc:5000/openshift/webserver31-tomcat7-openshift:latest
+
 #FROM tomcat7-base:latest
     
 USER root
