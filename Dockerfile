@@ -41,7 +41,7 @@ COPY files/vault/VAULT.dat ${TOMCAT_PATH}/conf/
 
 # Direcotry Permission
 RUN chmod 777 /logs /app/ -R \
-  && chown -R 185:root /app/ logs/
+  && chown -R 185:root /app/ /logs/
      
 # App 복사
 #ADD files/webapps/simple ${TOMCAT_PATH}/webapps/simple
