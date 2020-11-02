@@ -25,7 +25,7 @@ COPY mysql-connector-java-commercial-5.1.29-bin.jar ${TOMCAT_PATH}/lib/
 COPY postgresql-42.2.9.jar ${TOMCAT_PATH}/lib/
 
 # app
-ADD files/webapps/simple /app/simple
+#ADD files/webapps/simple /app/simple
 
 # conf
 COPY server.xml ${TOMCAT_PATH}/conf/
