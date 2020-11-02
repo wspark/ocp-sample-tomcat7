@@ -12,7 +12,7 @@ RUN mkdir -p /app /logs/was
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 RUN rm -rf /opt/webserver/bin/catalina.sh
-RUN rm -rf /opt/run-java/java-default-options
+#RUN rm -rf /opt/run-java/java-default-options
 RUN rm -rf $CATALINE_HOME/lib/log4j.properties  
   
 RUN rm -rf ${TOMCAT_PATH}/conf/server.xml
