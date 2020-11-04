@@ -187,7 +187,7 @@
         <Context path="/simple" docBase="simple" allowLinking="true">               
         </Context>
           <Valve className="org.apache.catalina.valves.AccessLogValve"
-               directory="/logs" prefix="${HOSTNAME}_access." suffix=".log"
+               directory="/logs/was" prefix="${HOSTNAME}_access." suffix=".log"
                pattern="%{X-Forwarded-For}i %h %l %u %t &quot;%r&quot; %s %b &quot;%{Referer}i&quot; &quot;%{User-Agent}i&quot;" 
                resolveHosts="false" fileDateFormat="yyyy-MM-dd-HH"/>
 <!--
